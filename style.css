@@ -7,7 +7,7 @@ html {
     box-sizing: inherit;
 }
 
-nav {
+header {
     position: absolute;
     top: 0;
     left: 0; 
@@ -16,7 +16,7 @@ nav {
     font-family: 'Poppins', sans-serif;
 }
 
-.nav-list {
+.header-list {
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -33,21 +33,21 @@ a {
 a:focus  {
     text-decoration: goldenrod underline;
 }
-nav i {
+header i {
     display: none;
 }
 
 @media screen and (max-width : 600px) {
-    .nav-list {
+    .header-list {
         display: none;
     }
 
-    nav {
+    header {
         display: flex;
         justify-content: flex-end;
     }
 
-    nav>i {
+    header > i {
         display: block;
         margin: 10px;
         background-image: url(./media/icons/menu_black_24dp.svg);
