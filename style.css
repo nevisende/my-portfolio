@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
 
-
 html {
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
@@ -14,7 +13,7 @@ html {
 }
 
 header {
-  box-shadow: #DDDFE6 0px 0.5px 0px 0px;
+  box-shadow: #dddfe6 0 0.5px 0 0;
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   width: 100vw;
@@ -61,14 +60,14 @@ header i {
 }
 
 .headline-section p {
-  color: #1A2236;
+  color: #1a2236;
   font-size: 1rem;
   letter-spacing: -0.01em;
   line-height: 21px;
 }
 
 .headline-section button {
-  background-color: #1A2236;
+  background-color: #1a2236;
   border: none;
   color: #fff;
   font-size: 1.3rem;
