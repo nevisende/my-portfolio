@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
+
 
 html {
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
 
@@ -11,18 +14,16 @@ html {
 }
 
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  font-size: 2rem;
+  box-shadow: #DDDFE6 0px 0.5px 0px 0px;
   font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  width: 100vw;
 }
 
 .header-list {
   display: flex;
-  justify-content: center;
   gap: 15px;
+  justify-content: center;
 }
 
 li {
@@ -30,8 +31,8 @@ li {
 }
 
 a {
-  text-decoration: none;
   color: black;
+  text-decoration: none;
 }
 
 a:focus {
@@ -40,6 +41,46 @@ a:focus {
 
 header i {
   display: none;
+}
+
+.headline-section {
+  align-items: center;
+  display: flex;
+  height: 80vh;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.headline-section .headline-content {
+  width: 40vw;
+}
+
+.headline-section h1 {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 7rem;
+}
+
+.headline-section p {
+  color: #1A2236;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  line-height: 21px;
+}
+
+.headline-section button {
+  background-color: #1A2236;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 2rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.headline-section img {
+  height: 100%;
+  width: 45vw;
 }
 
 @media screen and (max-width: 600px) {
@@ -53,12 +94,12 @@ header i {
   }
 
   header > i {
-    display: block;
-    margin: 10px;
     background-image: url(./media/icons/menu_black_24dp.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 24px;
+    display: block;
     height: 24px;
+    margin: 10px;
+    width: 24px;
   }
 }
