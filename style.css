@@ -112,7 +112,7 @@ a:focus {
     height: auto;
     padding: 5vw;
     position: relative;
-    width: calc(100%-20px);
+    width: calc(100% - 20px);
   }
 
   .headline-content {
@@ -136,7 +136,7 @@ a:focus {
 
   .headline-img {
     align-self: center;
-    max-height: auto;
+    height: auto;
     max-width: 100%;
   }
 }
