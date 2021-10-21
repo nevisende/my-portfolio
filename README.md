@@ -6,7 +6,7 @@
 
 > Welcome to my portfolio project
 
-![screenshot](./Screenshot.png)
+![screenshot](./media/Screenshot.png)
 
 ## Built With
 
