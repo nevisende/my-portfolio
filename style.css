@@ -75,19 +75,19 @@ a:focus {
   padding: 5vw;
   line-height: 1.5rem;
   text-align: center;
-  transition: color 0.4s ease,border 0.4s ease;
+  transition: color 0.4s ease, border 0.4s ease;
 }
 
 .headline-button:hover {
   background-color: #fff;
   border: #1a2236 solid 0.05rem;
-  color: #1a2236
+  color: #1a2236;
 }
 
 .headline-button:active {
   background-color: #fff;
   border: #1a2236 solid 0.25rem;
-  color: #1a2236
+  color: #1a2236;
 }
 
 .headline-img {
@@ -256,7 +256,7 @@ a:focus {
     padding: 0.3rem;
     width: max-content;
     gap: 10px;
-    transition: background-color 0.4s ease,border 0.6s linear;
+    transition: background-color 0.4s ease, border 0.6s linear;
   }
 
   .button:hover {
@@ -362,6 +362,7 @@ a:focus {
   .projects-section {
     grid-template-columns: 1fr 1fr;
   }
+  
   .project-image {
     background-repeat: no-repeat;
     background-size: cover;
