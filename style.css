@@ -167,7 +167,9 @@ a:focus {
 
   .section-title {
     padding-left: 2vw;
+    font-family: 'Playfair Display', sans-serif;
     font-size: 3rem;
+    font-weight: 400;
   }
 
   .project-image {
@@ -207,7 +209,7 @@ a:focus {
   }
 
   .project-container > * {
-    margin-left: 3vw;
+    margin-left: 8vw;
   }
  
   .project-container {
@@ -234,5 +236,83 @@ a:focus {
   .button a , .button a i {
     color: #fff;
     margin: 1vw;
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-section > * {
+    margin-right: 7vw;
+    margin-left: 7vw;
+  }
+
+  .cv-button {
+    border: #fff solid .05rem;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    justify-content: center;
+    align-content: stretch;
+    padding: 3vw;
+    font-size: 5vw;
+  }
+
+  .about-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .about-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding-top: 20px;
+  }
+
+  .about-detail::after {
+    align-self: flex-end;
+    content: "";
+    position: relative;
+    bottom: 0;
+    right: 0;
+    height: 100px;
+    width: 100px;
+  }
+
+  .about-detail:nth-of-type(1) {
+    background-color: #1c528a;
+  }
+
+  .about-detail:nth-of-type(1)::after {
+    background: url(./media/ic_languages_mob.svg) no-repeat right/cover;
+  }
+
+  .about-detail:nth-of-type(2) {
+    background-color: #e2505c;
+  }
+
+  .about-detail:nth-of-type(2)::after {
+    background: url(./media/ic_framework.svg) no-repeat right/cover;
+  }
+
+  .about-detail:nth-of-type(3) {
+    background-color: #febf52;
+  }
+
+  .about-detail:nth-of-type(3)::after {
+    background: url(./media/ic_skills.svg) no-repeat right/cover;
+  }
+
+  .about-detail h3 {
+    font-size: 6.25vw;
+    font-weight: 800;
+    line-height: 30px;
+  }
+
+  .about-list li {
+    list-style: disc;
+    font-size: 5.625vw;
   }
 }
