@@ -362,7 +362,7 @@ a:focus {
   .projects-section {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .project-image {
     background-repeat: no-repeat;
     background-size: cover;
