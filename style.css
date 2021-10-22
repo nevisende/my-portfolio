@@ -82,6 +82,30 @@ a:focus {
   width: 45vw;
 }
 
+.project-1 .project-image {
+  background-image: url('./media/project-1.png');
+}
+
+.project-2 .project-image {
+  background-image: url('./media/project-2.png');
+}
+
+.project-3 .project-image {
+  background-image: url('./media/project-3.png');
+}
+
+.project-4 .project-image {
+  background-image: url('./media/project-4.png');
+}
+
+.project-5 .project-image {
+  background-image: url('./media/project-5.png');
+}
+
+.project-6 .project-image {
+  background-image: url('./media/project-6.png');
+}
+
 @media screen and (max-width: 600px) {
   .header-list {
     display: none;
@@ -132,11 +156,83 @@ a:focus {
   .headline-button {
     margin-left: 15%;
     width: 70%;
+    font-size: 5vw;
   }
 
   .headline-img {
     align-self: center;
     height: auto;
     max-width: 100%;
+  }
+
+  .section-title {
+    padding-left: 2vw;
+    font-size: 3rem;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 58vw;
+    background-size: cover;
+    position: relative;
+    left: -3vw;
+  }
+
+  .project-1 .project-image {
+    top: -4px;
+  }
+
+  .project-name {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1rem;
+  }
+
+  .project-technology-container {
+    display: flex;
+  }
+  .project-technology {
+    display: flex;
+    align-items: center;
+    max-width: 30vw;
+    font-size: .7rem;
+    text-align: center;
+    background-color: #98dede;
+    font-style: normal;
+    color: #1a2236;
+    padding: 0.3rem;
+    margin-right: 1vw;
+    margin-top: 1vw;
+  }
+
+  .project-container > * {
+    margin-left: 3vw;
+  }
+ 
+  .project-container {
+    background-color: #1a2236;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button {
+    position: relative;
+    background-color: #1a2236;
+    display: flex;
+    align-items: center;
+    padding: .3rem;
+  }
+
+  .project-button {
+    border: #fff solid .05rem;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    width: fit-content;
+  }
+
+  .button a , .button a i {
+    color: #fff;
+    margin: 1vw;
   }
 }
