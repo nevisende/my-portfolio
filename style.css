@@ -75,6 +75,19 @@ a:focus {
   padding: 5vw;
   line-height: 1.5rem;
   text-align: center;
+  transition: color 0.4s ease,border 0.4s ease;
+}
+
+.headline-button:hover {
+  background-color: #fff;
+  border: #1a2236 solid 0.05rem;
+  color: #1a2236
+}
+
+.headline-button:active {
+  background-color: #fff;
+  border: #1a2236 solid 0.25rem;
+  color: #1a2236
 }
 
 .headline-img {
@@ -134,6 +147,10 @@ a:focus {
     height: 35px;
     margin: 5vw;
     width: 35px;
+  }
+
+  .project-image {
+    background-size: contain;
   }
 }
 
@@ -203,6 +220,7 @@ a:focus {
 
   .project-technology-container {
     display: flex;
+    padding: 0;
   }
 
   .project-technology {
@@ -230,24 +248,32 @@ a:focus {
   }
 
   .button {
-    position: relative;
-    background-color: #1a2236;
+    background-color: #fff;
+    border: #1a2236 solid 0.05rem;
+    color: #1a2236;
     display: flex;
     align-items: center;
     padding: 0.3rem;
+    width: max-content;
+    gap: 10px;
+    transition: background-color 0.4s ease,border 0.6s linear;
+  }
+
+  .button:hover {
+    background-color: #1a2236;
+    border: #fff solid 0.05rem;
+    color: #fff;
+  }
+
+  .button:active {
+    border: #fff solid 0.25rem;
   }
 
   .project-button {
-    border: #fff solid 0.05rem;
     margin-top: 5vw;
     margin-bottom: 5vw;
+    padding: 3vw;
     width: fit-content;
-  }
-
-  .button a,
-  .button a i {
-    color: #fff;
-    margin: 1vw;
   }
 
   .about-section {
@@ -261,13 +287,14 @@ a:focus {
   }
 
   .cv-button {
-    border: #fff solid 0.05rem;
+    border: #1a2236 solid 0.05rem;
     margin-top: 5vw;
     margin-bottom: 5vw;
     justify-content: center;
     align-content: stretch;
     padding: 3vw;
     font-size: 5vw;
+    align-self: center;
   }
 
   .about-details-container {
@@ -334,5 +361,10 @@ a:focus {
 @media screen and (min-width: 600px) and (max-width: 900px) {
   .projects-section {
     grid-template-columns: 1fr 1fr;
+  }
+  .project-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35vh;
   }
 }
