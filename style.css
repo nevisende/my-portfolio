@@ -113,7 +113,7 @@ a:focus {
 
 .projects-section {
   display: grid;
-  grid-column: 1fr;
+  grid-template-columns: 1fr;
 }
 
 @media screen and (max-width: 600px) {
@@ -204,11 +204,12 @@ a:focus {
   .project-technology-container {
     display: flex;
   }
+
   .project-technology {
     display: flex;
     align-items: center;
     max-width: 30vw;
-    font-size: .7rem;
+    font-size: 0.7rem;
     text-align: center;
     background-color: #98dede;
     font-style: normal;
@@ -221,7 +222,7 @@ a:focus {
   .project-container > * {
     margin-left: 3vw;
   }
- 
+
   .project-container {
     background-color: #1a2236;
     display: flex;
@@ -233,17 +234,18 @@ a:focus {
     background-color: #1a2236;
     display: flex;
     align-items: center;
-    padding: .3rem;
+    padding: 0.3rem;
   }
 
   .project-button {
-    border: #fff solid .05rem;
+    border: #fff solid 0.05rem;
     margin-top: 5vw;
     margin-bottom: 5vw;
     width: fit-content;
   }
 
-  .button a , .button a i {
+  .button a ,
+  .button a i {
     color: #fff;
     margin: 1vw;
   }
@@ -252,13 +254,14 @@ a:focus {
     display: flex;
     flex-direction: column;
   }
+
   .about-section > * {
     margin-right: 7vw;
     margin-left: 7vw;
   }
 
   .cv-button {
-    border: #fff solid .05rem;
+    border: #fff solid 0.05rem;
     margin-top: 5vw;
     margin-bottom: 5vw;
     justify-content: center;
@@ -272,6 +275,7 @@ a:focus {
     flex-direction: column;
     gap: 10px;
   }
+
   .about-detail {
     display: flex;
     flex-direction: column;
