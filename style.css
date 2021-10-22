@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+header {
+  box-shadow: #dddfe6 0 0.5px 0 0;
+  font-size: 2rem;
+  width: 100vw;
+}
+
+.header-list {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:focus {
+  text-decoration: goldenrod underline;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.headline-section {
+  align-items: center;
+  display: flex;
+  height: 80vh;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.headline-content {
+  width: 40vw;
+}
+
+.headline-title {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 7rem;
+}
+
+.headline-p {
+  color: #1a2236;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  line-height: 21px;
+}
+
+.headline-button {
+  background-color: #1a2236;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 2rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.headline-img {
+  height: 100%;
+  width: 45vw;
+}
+
+@media screen and (max-width: 600px) {
+  .header-list {
+    display: none;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu-icon {
+    background-image: url(./media/icons/menu_black_24dp.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 35px;
+    margin: 5vw;
+    width: 35px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .headline-section {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    height: auto;
+    padding: 5vw;
+    position: relative;
+    width: calc(100% - 20px);
+  }
+
+  .headline-content {
+    width: 100%;
+  }
+
+  .headline-title {
+    font-size: 13vw;
+    margin-bottom: 7vw;
+  }
+
+  .headline-p {
+    width: 100%;
+    margin-bottom: 10vw;
+  }
+
+  .headline-button {
+    margin-left: 15%;
+    width: 70%;
+  }
+
+  .headline-img {
+    align-self: center;
+    height: auto;
+    max-width: 100%;
+  }
+}
