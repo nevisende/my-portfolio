@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap");
 
 html {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
 
@@ -59,7 +59,7 @@ a:focus {
 }
 
 .headline-title {
-  font-family: 'Playfair Display', sans-serif;
+  font-family: "Playfair Display", sans-serif;
   font-size: 7rem;
 }
 
@@ -100,27 +100,27 @@ a:focus {
 }
 
 .project-1 .project-image {
-  background-image: url('./media/project-1.png');
+  background-image: url("./media/project-1.png");
 }
 
 .project-2 .project-image {
-  background-image: url('./media/project-2.png');
+  background-image: url("./media/project-2.png");
 }
 
 .project-3 .project-image {
-  background-image: url('./media/project-3.png');
+  background-image: url("./media/project-3.png");
 }
 
 .project-4 .project-image {
-  background-image: url('./media/project-4.png');
+  background-image: url("./media/project-4.png");
 }
 
 .project-5 .project-image {
-  background-image: url('./media/project-5.png');
+  background-image: url("./media/project-5.png");
 }
 
 .project-6 .project-image {
-  background-image: url('./media/project-6.png');
+  background-image: url("./media/project-6.png");
 }
 
 .wrapper-grid {
@@ -198,7 +198,7 @@ a:focus {
 
   .section-title {
     padding-left: 2vw;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: "Playfair Display", sans-serif;
     font-size: 3rem;
     font-weight: 400;
   }
@@ -348,6 +348,61 @@ a:focus {
 
   .about-detail:nth-of-type(3)::after {
     background: url(./media/ic_skills.svg) no-repeat right/cover;
+  }
+
+  .contact-section {
+    background: url("./media/contact.svg");
+    background-repeat: no-repeat;
+  }
+
+  .contact-section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3vw;
+  }
+
+  form h2 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    text-align: left;
+    color: #1a2236;
+  }
+
+  form p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: #1a2236;
+  }
+
+  form .contact-label * {
+    padding: 4vw;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 2vw;
+  }
+
+  form textarea {
+    padding: 4vw;
+    border-radius: 2vw;
+  }
+
+  form button {
+    width: 100%;
+    padding: 3vw;
+    background: #1a2236;
+    border: none;
+    color: #fff;
+    margin-top: 3vh;
+    cursor: pointer;
   }
 
   .about-detail h3 {
