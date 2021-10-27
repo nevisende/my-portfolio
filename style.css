@@ -20,9 +20,13 @@ header {
 }
 
 .header-list {
-  display: flex;
+  display: inline-block;
   gap: 15px;
   justify-content: center;
+}
+
+.header-list li {
+  float: left;
 }
 
 li {
@@ -350,6 +354,9 @@ a:focus {
     font-size: 6.25vw;
     font-weight: 800;
     line-height: 30px;
+  }
+  .about-detail ul{
+    float: left;
   }
 
   .about-list li {
