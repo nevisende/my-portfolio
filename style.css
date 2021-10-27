@@ -219,12 +219,12 @@ a:focus {
   }
 
   .project-technology-container {
-    display: flex;
+    display: inline-block;
     padding: 0;
   }
 
   .project-technology {
-    display: flex;
+    float: left;
     align-items: center;
     max-width: 30vw;
     font-size: 0.7rem;
