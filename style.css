@@ -25,12 +25,12 @@ header {
   justify-content: center;
 }
 
-.header-list li {
-  float: left;
-}
-
 li {
   list-style-type: none;
+}
+
+.header-list li {
+  float: left;
 }
 
 a {
@@ -355,7 +355,8 @@ a:focus {
     font-weight: 800;
     line-height: 30px;
   }
-  .about-detail ul{
+
+  .about-detail ul {
     float: left;
   }
 
