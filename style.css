@@ -361,11 +361,12 @@ a:focus {
     align-items: center;
     flex-direction: column;
     padding: 3vw;
+    background-color: #f9f9fa;
   }
 
   form h2 {
     font-family: "Playfair Display", sans-serif;
-    font-size: 50px;
+    font-size: 10vw;
     font-style: normal;
     font-weight: 400;
     line-height: 50px;
@@ -374,25 +375,56 @@ a:focus {
   }
 
   form p {
-    font-size: 14px;
+    font-size: 3.5vw;
     font-style: normal;
     font-weight: 400;
-    line-height: 21px;
+    line-height: 5vw;
     letter-spacing: -0.01em;
     text-align: left;
     color: #1a2236;
   }
 
-  form .contact-label * {
-    padding: 4vw;
+  .contact-label {
     width: 100%;
-    margin: 10px 0;
+    margin: 3vw;
+    border: #dddfe6 solid 0.01vw;
     border-radius: 2vw;
+    padding: 2vw;
+    background-color: #fff;
+  }
+
+  .contact-label:hover,
+  .contact-label:target,
+  .contact-label:focus {
+    border: #1a2236 solid 0.1vw;
+  }
+
+  .contact-label * {
+    width: 100%;
+    font-size: 2.5vw;
+  }
+
+  .contact-label span {
+    color: #7d7c84;
+  }
+
+  .contact-label input {
+    border: none;
+    margin-top: 1vw;
+    font-size: 3.5vw;
+  }
+
+  .contact-label input:focus {
+    outline: none;
   }
 
   form textarea {
+    width: 100%;
     padding: 4vw;
-    border-radius: 2vw;
+    border: none;
+    font-size: 3.5vw;
+    line-height: 5vw;
+    outline: none;
   }
 
   form button {
@@ -403,6 +435,13 @@ a:focus {
     color: #fff;
     margin-top: 3vh;
     cursor: pointer;
+    font-size: 5vw;
+  }
+
+  form button:hover {
+    background-color: #fff;
+    border: #000 solid 0.05rem;
+    color: #1a2236;
   }
 
   .about-detail h3 {
