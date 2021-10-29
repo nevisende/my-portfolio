@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap");
 
 html {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
 
@@ -20,13 +20,17 @@ header {
 }
 
 .header-list {
-  display: flex;
+  display: inline-block;
   gap: 15px;
   justify-content: center;
 }
 
 li {
   list-style-type: none;
+}
+
+.header-list li {
+  float: left;
 }
 
 a {
@@ -55,7 +59,7 @@ a:focus {
 }
 
 .headline-title {
-  font-family: 'Playfair Display', sans-serif;
+  font-family: "Playfair Display", sans-serif;
   font-size: 7rem;
 }
 
@@ -96,27 +100,27 @@ a:focus {
 }
 
 .project-1 .project-image {
-  background-image: url('./media/project-1.png');
+  background-image: url("./media/project-1.png");
 }
 
 .project-2 .project-image {
-  background-image: url('./media/project-2.png');
+  background-image: url("./media/project-2.png");
 }
 
 .project-3 .project-image {
-  background-image: url('./media/project-3.png');
+  background-image: url("./media/project-3.png");
 }
 
 .project-4 .project-image {
-  background-image: url('./media/project-4.png');
+  background-image: url("./media/project-4.png");
 }
 
 .project-5 .project-image {
-  background-image: url('./media/project-5.png');
+  background-image: url("./media/project-5.png");
 }
 
 .project-6 .project-image {
-  background-image: url('./media/project-6.png');
+  background-image: url("./media/project-6.png");
 }
 
 .wrapper-grid {
@@ -194,7 +198,7 @@ a:focus {
 
   .section-title {
     padding-left: 2vw;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: "Playfair Display", sans-serif;
     font-size: 3rem;
     font-weight: 400;
   }
@@ -219,12 +223,12 @@ a:focus {
   }
 
   .project-technology-container {
-    display: flex;
+    display: inline-block;
     padding: 0;
   }
 
   .project-technology {
-    display: flex;
+    float: left;
     align-items: center;
     max-width: 30vw;
     font-size: 0.7rem;
@@ -346,10 +350,108 @@ a:focus {
     background: url(./media/ic_skills.svg) no-repeat right/cover;
   }
 
+  .contact-section {
+    background: url("./media/contact.svg");
+    background-repeat: no-repeat;
+  }
+
+  .contact-section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3vw;
+    background-color: #f9f9fa;
+  }
+
+  form h2 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 10vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    text-align: left;
+    color: #1a2236;
+  }
+
+  form p {
+    font-size: 3.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 5vw;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: #1a2236;
+  }
+
+  .contact-label {
+    width: 100%;
+    margin: 3vw;
+    border: #dddfe6 solid 0.01vw;
+    border-radius: 2vw;
+    padding: 2vw;
+    background-color: #fff;
+  }
+
+  .contact-label:hover,
+  .contact-label:target,
+  .contact-label:focus {
+    border: #1a2236 solid 0.1vw;
+  }
+
+  .contact-label * {
+    width: 100%;
+    font-size: 2.5vw;
+  }
+
+  .contact-label span {
+    color: #7d7c84;
+  }
+
+  .contact-label input {
+    border: none;
+    margin-top: 1vw;
+    font-size: 3.5vw;
+  }
+
+  .contact-label input:focus {
+    outline: none;
+  }
+
+  form textarea {
+    width: 100%;
+    padding: 4vw;
+    border: none;
+    font-size: 3.5vw;
+    line-height: 5vw;
+    outline: none;
+  }
+
+  form button {
+    width: 100%;
+    padding: 3vw;
+    background: #1a2236;
+    border: none;
+    color: #fff;
+    margin-top: 3vh;
+    cursor: pointer;
+    font-size: 5vw;
+  }
+
+  form button:hover {
+    background-color: #fff;
+    border: #000 solid 0.05rem;
+    color: #1a2236;
+  }
+
   .about-detail h3 {
     font-size: 6.25vw;
     font-weight: 800;
     line-height: 30px;
+  }
+
+  .about-detail ul {
+    float: left;
   }
 
   .about-list li {

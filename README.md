@@ -19,6 +19,10 @@
 - GitHub: [@nevisende](https://github.com/nevisende)
 - Twitter: [@furkandnzhan](https://twitter.com/furkandnzhan)
 
+## 👤 My Coding Partner
+
+- GitHub: [@Gbengacode](https://github.com/Gbengacode)
+- His Portfolio source: [@Setup-mobile-version-porfolio](https://github.com/Gbengacode/Setup-mobile-version-porfolio)
 
 
 

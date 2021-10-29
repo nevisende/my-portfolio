@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "npx hint . || npx stylelint \"**/*.{css,scss}\" "
+  },
   "devDependencies": {
     "hint": "^6.1.4",
     "stylelint": "^13.13.1",
