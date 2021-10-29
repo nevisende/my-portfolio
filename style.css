@@ -309,6 +309,7 @@ a:focus {
 
   .about-detail {
     display: flex;
+    visibility: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -327,6 +328,7 @@ a:focus {
   }
 
   .about-detail:nth-of-type(1) {
+    animation: forwards 1.4s 0.3s slidein;
     background-color: #1c528a;
   }
 
@@ -335,6 +337,7 @@ a:focus {
   }
 
   .about-detail:nth-of-type(2) {
+    animation: forwards 1.4s 0.6s slidein;
     background-color: #e2505c;
   }
 
@@ -343,6 +346,7 @@ a:focus {
   }
 
   .about-detail:nth-of-type(3) {
+    animation: forwards 1.4s 0.9s slidein;
     background-color: #febf52;
   }
 
@@ -469,5 +473,19 @@ a:focus {
     background-repeat: no-repeat;
     background-size: cover;
     height: 35vh;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    visibility: visible;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    visibility: visible;
+    width: 100%;
   }
 }
