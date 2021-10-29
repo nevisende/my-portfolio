@@ -50,7 +50,7 @@ a:focus {
 }
 
 .headline-section {
-  align-items: center;
+  align-items: flex-end;
   display: flex;
   height: 80vh;
   justify-content: space-around;
@@ -79,8 +79,8 @@ a:focus {
   color: #fff;
   font-size: 1.8vw;
   font-weight: 500;
-  padding: 3vw 5vw;
-  margin-block-start: 5vw;
+  padding: 2vw 4vw;
+  margin-block-start: 4vw;
   line-height: 2vw;
   text-align: center;
   transition: color 0.4s ease, border 0.4s ease;
@@ -98,9 +98,22 @@ a:focus {
   color: #1a2236;
 }
 
+.headline-images {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+  position: relative;
+}
+
 .headline-img {
   height: 100%;
-  width: 45vw;
+  width: auto;
+}
+
+.headline-img2 {
+  position: absolute;
+  width: 10vw;
+  left: -10vw;
 }
 
 .project-1 .project-image {
