@@ -209,6 +209,12 @@ a:focus {
     background-size: contain;
     position: relative;
     left: -3vw;
+    transition: transform 2s ease-in-out;
+  }
+
+  .project-image:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
   }
 
   .project-1 .project-image {
@@ -386,6 +392,11 @@ a:focus {
     letter-spacing: -0.01em;
     text-align: left;
     color: #1a2236;
+    transition: all 5s ease-out;
+  }
+
+  form p:hover {
+    transform: translate(50%);
   }
 
   .contact-label {
