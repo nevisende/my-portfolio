@@ -68,19 +68,20 @@ a:focus {
 
 .headline-p {
   color: #1a2236;
-  font-size: 1rem;
+  font-size: 1.5vw;
   letter-spacing: -0.01em;
-  line-height: 21px;
+  line-height: 2vw;
 }
 
 .headline-button {
   background-color: #1a2236;
   border: none;
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1.8vw;
   font-weight: 500;
-  padding: 5vw;
-  line-height: 1.5rem;
+  padding: 3vw 5vw;
+  margin-block-start: 5vw;
+  line-height: 2vw;
   text-align: center;
   transition: color 0.4s ease, border 0.4s ease;
 }
