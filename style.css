@@ -220,7 +220,7 @@ a:focus {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-image: url('/media/project-1.png');
+  background-image: url('/media/project-2.png');
   background-size: cover;
   width: 100%;
   height: 80%;
@@ -250,7 +250,7 @@ a:focus {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url('/media/project-1.png');
+  background-image: url('/media/project-6.png');
   background-size: cover;
   width: 100%;
   height: 80%;
@@ -365,11 +365,11 @@ a:focus {
 }
 
 .no-grid-project-div .project-image {
-  background-image: url('https://consumer-img.huawei.com/content/dam/huawei-cbg-site/central-asia/tr/mkt/pdp/pc/matebook-x-pro-2021/02list_01-v1.jpg');
+  background-image: url('media/project-5.png');
   order: 2;
   background-size: cover;
-  width: 25vw;
-  height: 15vw;
+  width: 33.3vw;
+  height: 20vw;
   background-repeat: no-repeat;
 }
 
@@ -379,33 +379,139 @@ a:focus {
   align-self: flex-end;
 }
 
-.project-1 .project-image {
-  background-image: url("./media/project-1.png");
-}
-
-.project-2 .project-image {
-  background-image: url("./media/project-2.png");
-}
-
-.project-3 .project-image {
-  background-image: url("./media/project-3.png");
-}
-
-.project-4 .project-image {
-  background-image: url("./media/project-4.png");
-}
-
-.project-5 .project-image {
-  background-image: url("./media/project-5.png");
-}
-
-.project-6 .project-image {
-  background-image: url("./media/project-6.png");
-}
-
 .wrapper-grid {
   display: grid;
   grid-template-columns: 1fr;
+}
+
+.about-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10vw;
+}
+
+.about-header {
+  flex: 1;
+  padding: 5vw;
+  order: 2;
+  width: 50%;
+  animation: forwards 1.4s 1.7s slidein;
+  visibility: hidden;
+}
+
+.about-header h2 {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 7vw;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.cv-button {
+  background-color: #1a2236;
+  border: none;
+  color: #fff;
+  font-size: 1.8vw;
+  font-weight: 500;
+  padding: 2vw 4vw;
+  margin-block-start: 4vw;
+  line-height: 2vw;
+  text-align: center;
+  transition: color 0.4s ease, border 0.4s ease;
+}
+
+.cv-button:hover {
+  background-color: #fff;
+  border: #1a2236 solid 0.05rem;
+  color: #1a2236;
+}
+
+.cv-button:active {
+  background-color: #fff;
+  border: #1a2236 solid 0.25rem;
+  color: #1a2236;
+}
+
+.cv-button img {
+  margin-left: 1vw;
+  color: #fff;
+  fill: #fff;
+}
+
+.about-details-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+
+.about-detail {
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.about-detail::after {
+  align-self: flex-end;
+  content: "";
+  position: relative;
+  bottom: 0;
+  right: 0;
+  height: 100px;
+  width: 100px;
+}
+
+.about-detail:nth-of-type(1) {
+  grid-area: 1 / 1 / 2 / 2;
+  animation: forwards 1.4s 0.3s slidein;
+  background-color: #1c528a;
+}
+
+.about-detail:nth-of-type(1)::after {
+  background: url(./media/ic_languages_mob.svg) no-repeat right/cover;
+}
+
+.about-detail:nth-of-type(2) {
+  grid-area: 1 / 2 / 2 / 3;
+  animation: forwards 1.4s 0.6s slidein;
+  background-color: #e2505c;
+}
+
+.about-detail:nth-of-type(2)::after {
+  background: url(./media/ic_framework.svg) no-repeat right/cover;
+}
+
+.about-detail:nth-of-type(3) {
+  grid-area: 2 / 1 / 3 / 2;
+  animation: forwards 1.4s 0.9s slidein;
+  background-color: #febf52;
+}
+
+.about-detail:nth-of-type(3)::after {
+  background: url(./media/ic_skills.svg) no-repeat right/cover;
+}
+
+.about-detail:nth-of-type(4) {
+  grid-area: 2 / 2 / 3 / 3;
+  height: 100%;
+  align-self: flex-end;
+  animation: forwards 1.4s 1.2s slidein;
+  background-color: #fff;
+  position: relative;
+}
+
+.about-detail:nth-of-type(4)::after {
+  bottom: 0;
+  width: 70%;
+  height: 65%;
+  position: absolute;
+  background: url(./media/image_dots_with_teal.svg) no-repeat right/cover;
 }
 
 @media screen and (max-width: 600px) {
@@ -567,53 +673,6 @@ a:focus {
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
-
-  .about-detail {
-    display: flex;
-    visibility: hidden;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    padding-top: 20px;
-  }
-
-  .about-detail::after {
-    align-self: flex-end;
-    content: "";
-    position: relative;
-    bottom: 0;
-    right: 0;
-    height: 100px;
-    width: 100px;
-  }
-
-  .about-detail:nth-of-type(1) {
-    animation: forwards 1.4s 0.3s slidein;
-    background-color: #1c528a;
-  }
-
-  .about-detail:nth-of-type(1)::after {
-    background: url(./media/ic_languages_mob.svg) no-repeat right/cover;
-  }
-
-  .about-detail:nth-of-type(2) {
-    animation: forwards 1.4s 0.6s slidein;
-    background-color: #e2505c;
-  }
-
-  .about-detail:nth-of-type(2)::after {
-    background: url(./media/ic_framework.svg) no-repeat right/cover;
-  }
-
-  .about-detail:nth-of-type(3) {
-    animation: forwards 1.4s 0.9s slidein;
-    background-color: #febf52;
-  }
-
-  .about-detail:nth-of-type(3)::after {
-    background: url(./media/ic_skills.svg) no-repeat right/cover;
   }
 
   .contact-section {
