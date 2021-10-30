@@ -128,6 +128,19 @@ a:focus {
   position: relative;
 }
 
+.contact-section form button {
+  background-color: #1a2236;
+  border: none;
+  color: #fff;
+  font-size: 1.8vw;
+  font-weight: 500;
+  padding: 2vw 4vw;
+  margin-block-start: 4vw;
+  line-height: 2vw;
+  text-align: center;
+  transition: color 0.4s ease, border 0.4s ease;
+}
+
 .grid-project-div-1 {
   grid-area: 1 / 1 / 4 / 5;
   width: 100%;
@@ -329,6 +342,29 @@ a:focus {
   display: none;
 }
 
+.no-grid-project-div .project-content button {
+  width: 55%;
+  padding: 0.5vw 0 0.5vw 0;
+  background-color: #fff;
+}
+
+.contact-section form button:hover {
+  background-color: #fff;
+  border: #1a2236 solid 0.05rem;
+  color: #1a2236;
+}
+
+.contact-section form button:active {
+  background-color: #fff;
+  border: #1a2236 solid 0.25rem;
+  color: #1a2236;
+}
+
+.no-grid-project-div .project-content button:hover {
+  color: #fff;
+  background-color: #1a2236;
+}
+
 .no-grid-project-div {
   display: flex;
   flex-direction: column;
@@ -351,17 +387,6 @@ a:focus {
 .no-grid-project-div .project-content h3 {
   color: #fff;
   font-size: x-large;
-}
-
-.no-grid-project-div .project-content button {
-  width: 55%;
-  padding: 0.5vw 0 0.5vw 0;
-  background-color: #fff;
-}
-
-.no-grid-project-div .project-content button:hover {
-  color: #fff;
-  background-color: #1a2236;
 }
 
 .no-grid-project-div .project-image {
@@ -512,6 +537,90 @@ a:focus {
   height: 65%;
   position: absolute;
   background: url(./media/image_dots_with_teal.svg) no-repeat right/cover;
+}
+
+.contact-section {
+  background-color: #f9f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7vw;
+  position: relative;
+  width: 100vw;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+}
+
+.contact-section h2 {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 7vw;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1vw;
+}
+
+.contact-label-group {
+  display: flex;
+  margin-bottom: 1vw;
+}
+
+.contact-label:nth-of-type(1) {
+  margin-right: 2.5vw;
+}
+
+.contact-label input {
+  border: #e0e0e0 solid 0.1vw;
+  margin-top: 1vw;
+  font-size: 3.5vw;
+}
+
+.contact-label input:hover,
+.contact-label input:target,
+.contact-label input:focus {
+  border: #1a2236 solid 0.1vw;
+}
+
+.contact-label * {
+  width: 100%;
+  font-size: 1vw;
+}
+
+.contact-label span {
+  color: #7d7c84;
+}
+
+.contact-label input:focus {
+  outline: none;
+}
+
+form textarea {
+  border: #e0e0e0 solid 0.1vw;
+  width: 100%;
+  padding: 1.5vw;
+  font-size: 1.5vw;
+  line-height: 2vw;
+  outline: none;
+}
+
+.contact-section img:nth-of-type(1) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-height: 100%;
+  max-width: 15vw;
+}
+
+.contact-section img:nth-of-type(2) {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  max-width: 15vw;
 }
 
 @media screen and (max-width: 600px) {
