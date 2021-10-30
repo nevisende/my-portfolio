@@ -14,6 +14,7 @@ html {
 }
 
 header {
+  height: 15vh;
   display: flex;
   justify-content: center;
   box-shadow: #dddfe6 0 0.5px 0 0;
@@ -55,6 +56,7 @@ a:focus {
   height: 80vh;
   justify-content: space-around;
   width: 100vw;
+  margin-bottom: 5vh;
 }
 
 .headline-content {
@@ -63,14 +65,14 @@ a:focus {
 
 .headline-title {
   font-family: "Playfair Display", sans-serif;
-  font-size: 7rem;
+  font-size: 7vw;
 }
 
 .headline-p {
   color: #1a2236;
-  font-size: 1.5vw;
+  font-size: 1vw;
   letter-spacing: -0.01em;
-  line-height: 2vw;
+  line-height: 1.5vw;
 }
 
 .headline-button {
@@ -122,17 +124,260 @@ a:focus {
   grid-template-rows: repeat(10, 1fr);
   grid-column-gap: 0;
   grid-row-gap: 0;
+  width: 100vw;
+  position: relative;
 }
 
-.grid-project-div-1 { grid-area: 1 / 1 / 4 / 5; }
-.grid-project-div-2 { grid-area: 1 / 5 / 4 / 13; }
-.grid-project-div-3 { grid-area: 4 / 1 / 6 / 5; }
-.grid-project-div-4 { grid-area: 4 / 5 / 6 / 9; }
-.grid-project-div-5 { grid-area: 4 / 9 / 6 / 13; }
-.grid-project-div-6 { grid-area: 6 / 1 / 9 / 8; }
-.grid-project-div-7 { grid-area: 6 / 8 / 9 / 13; }
-.grid-project-div-8 { grid-area: 9 / 1 / 11 / 8; }
-.grid-project-div-9 { grid-area: 9 / 8 / 11 / 13; }
+.grid-project-div-1 {
+  grid-area: 1 / 1 / 4 / 5;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-project-div-1 h2 {
+  transform: rotate(90deg);
+  line-height: 100%;
+  font-size: 3vw;
+  color: #1a2236;
+}
+
+.grid-project-div-1 img {
+  width: 7vw;
+  align-self: flex-start;
+}
+
+.grid-project-div-2 {
+  grid-area: 1 / 5 / 4 / 13;
+  position: relative;
+}
+
+.grid-project-div-2 .project-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url('/media/project-1.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.grid-project-div-2 .project-content {
+  background-color: #1a2236;
+  max-height: 70%;
+  width: 100%;
+  display: flex;
+  padding: 0 2vw 2vw;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+}
+
+.grid-project-div-2 .project-content h3 {
+  color: #fff;
+  font-size: xx-large;
+}
+
+.grid-project-div-2 .project-content button {
+  width: 30%;
+  padding: 0.5vw 0 0.5vw 0;
+  background-color: #fff;
+}
+
+.project-content button:hover {
+  background-color: #1a2236;
+  border: #fff solid 0.05rem;
+  color: #fff;
+}
+
+.project-technology-container {
+  display: inline-block;
+  padding: 0;
+}
+
+.project-technology {
+  align-items: center;
+  float: left;
+  font-size: 0.7rem;
+  text-align: center;
+  background-color: #98dede;
+  font-style: normal;
+  color: #1a2236;
+  padding: 0.3rem;
+  margin-right: 1vw;
+  margin-top: 1vw;
+  max-width: 30vw;
+}
+
+.grid-project-div-3 {
+  grid-area: 4 / 1 / 6 / 5;
+  position: relative;
+}
+
+.grid-project-div-3 .project-image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: url('/media/project-1.png');
+  background-size: cover;
+  width: 100%;
+  height: 80%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.grid-project-div-3 .project-content {
+  display: none;
+}
+
+.grid-project-div-4 {
+  grid-area: 4 / 5 / 6 / 9;
+  width: 100%;
+}
+
+.grid-project-div-4 img {
+  width: 100%;
+}
+
+.grid-project-div-5 {
+  grid-area: 4 / 9 / 6 / 13;
+  position: relative;
+}
+
+.grid-project-div-5 .project-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url('/media/project-1.png');
+  background-size: cover;
+  width: 100%;
+  height: 80%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.grid-project-div-5 .project-content {
+  display: none;
+}
+
+.grid-project-div-6 {
+  grid-area: 6 / 1 / 9 / 8;
+  position: relative;
+}
+
+.grid-project-div-6 .project-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url('media/project-3.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.grid-project-div-6 .project-content {
+  display: none;
+}
+
+.grid-project-div-7 {
+  grid-area: 6 / 8 / 9 / 13;
+  position: relative;
+}
+
+.grid-project-div-7 img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10vw;
+}
+
+.grid-project-div-8 {
+  grid-area: 9 / 1 / 11 / 8;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.grid-project-div-8 img {
+  height: 10vw;
+}
+
+.grid-project-div-9 {
+  grid-area: 9 / 8 / 11 / 13;
+  position: relative;
+}
+
+.grid-project-div-9 .project-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url('media/project-4.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.grid-project-div-9 .project-content {
+  display: none;
+}
+
+.no-grid-project-div {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 40vw;
+  width: 33.3vw;
+}
+
+.no-grid-project-div .project-content {
+  background-color: #1a2236;
+  max-height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 0 2vw 2vw;
+  flex-direction: column;
+  order: 1;
+}
+
+.no-grid-project-div .project-content h3 {
+  color: #fff;
+  font-size: x-large;
+}
+
+.no-grid-project-div .project-content button {
+  width: 55%;
+  padding: 0.5vw 0 0.5vw 0;
+  background-color: #fff;
+}
+
+.no-grid-project-div .project-content button:hover {
+  color: #fff;
+  background-color: #1a2236;
+}
+
+.no-grid-project-div .project-image {
+  background-image: url('https://consumer-img.huawei.com/content/dam/huawei-cbg-site/central-asia/tr/mkt/pdp/pc/matebook-x-pro-2021/02list_01-v1.jpg');
+  order: 2;
+  background-size: cover;
+  width: 25vw;
+  height: 15vw;
+  background-repeat: no-repeat;
+}
+
+.no-grid-project-div img {
+  order: 3;
+  width: 80%;
+  align-self: flex-end;
+}
 
 .project-1 .project-image {
   background-image: url("./media/project-1.png");
@@ -256,25 +501,6 @@ a:focus {
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 1rem;
-  }
-
-  .project-technology-container {
-    display: inline-block;
-    padding: 0;
-  }
-
-  .project-technology {
-    float: left;
-    align-items: center;
-    max-width: 30vw;
-    font-size: 0.7rem;
-    text-align: center;
-    background-color: #98dede;
-    font-style: normal;
-    color: #1a2236;
-    padding: 0.3rem;
-    margin-right: 1vw;
-    margin-top: 1vw;
   }
 
   .project-container > * {
