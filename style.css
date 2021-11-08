@@ -643,6 +643,24 @@ form textarea {
   width: 263px;
   height: 114px;
   background-image: url(./media/hamburger-menu-before.svg);
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  z-index: 1000;
+}
+
+.hamburger-menu::after {
+  content: "";
+  background-image: url(./media/hamburger_menu_after.png);
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: max-content;
+  background-size: cover;
+  z-index: 1000;
 }
 
 .hamburger-menu .menu-icon {
