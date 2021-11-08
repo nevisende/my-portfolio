@@ -623,7 +623,39 @@ form textarea {
   max-width: 15vw;
 }
 
+.hamburger-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 100;
+  line-height: 20vw;
+}
+
+.hamburger-menu::before {
+  content: "";
+  width: 263px;
+  height: 114px;
+  background-image: url(./media/hamburger-menu-before.svg);
+}
+
+.hamburger-menu .menu-icon {
+  position: fixed;
+  top: 2vw;
+  right: 2vw;
+}
+
 @media screen and (max-width: 600px) {
+  header {
+    justify-content: flex-end;
+  }
+
   .header-list {
     display: none;
   }
@@ -634,9 +666,6 @@ form textarea {
   }
 
   .menu-icon {
-    background-image: url(./media/icons/menu_black_24dp.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
     display: block;
     height: 35px;
     margin: 5vw;
