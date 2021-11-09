@@ -673,7 +673,7 @@ form textarea {
 .popup-container {
   position: fixed;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   padding: 5vw;
   top: 0;
@@ -683,12 +683,20 @@ form textarea {
   background-color: rgba(26, 34, 54, 0.95);
   z-index: 10;
   width: 100vw;
+  overflow: initial;
+  height: fit-content;
 }
 
 .popup {
+  display: block;
+  flex-direction: column;
+  align-items: stretch;
   background-color: #fff;
   width: 85vw;
   padding: 5%;
+  margin: 1rem 0;
+  overflow-y: auto;
+  height: 80vh;
 }
 
 .popup h2 {
@@ -707,6 +715,20 @@ form textarea {
 .popup-list li {
   border: 1px solid #1a2236;
   padding: 0.5vw;
+}
+
+.popup-img {
+  width: 100%;
+  height: auto;
+}
+
+.images {
+  display: flex;
+}
+
+.list-img {
+  display: inline;
+  width: 25%;
 }
 
 @keyframes slidein {
