@@ -672,7 +672,7 @@ form textarea {
 
 .popup-container {
   position: fixed;
-  display: flex;
+  display: none;
   align-items: stretch;
   justify-content: center;
   padding: 5vw;

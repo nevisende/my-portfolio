@@ -3,6 +3,8 @@ const hamburgerMenu = document.getElementById('hamburger-menu');
 const headerList = document.getElementById('header-list');
 const menuIcon = document.getElementById('menu-icon');
 const itemsHeader = document.querySelectorAll('.header-item');
+const projectButtons = document.querySelectorAll('.project-button');
+const popupContainer = document.querySelector('.popup-container');
 
 function toogleMenu() {
   headerList.classList.toggle('header-list');
@@ -23,5 +25,11 @@ menuIcon.addEventListener('click', () => {
 itemsHeader.forEach((item) => {
   item.addEventListener('click', () => {
     if (window.outerWidth <= 980) toogleMenu();
+  });
+});
+
+projectButtons.forEach((projectButton) => {
+  projectButton.addEventListener('click', () => {
+    popupContainer.style.display = 'flex';
   });
 });
