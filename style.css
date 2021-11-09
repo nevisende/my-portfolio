@@ -663,15 +663,50 @@ form textarea {
   background-size: cover;
 }
 
-.hamburger-menu ul li {
-  z-index: 1000000000;
-}
-
 .hamburger-menu .menu-icon {
   position: fixed;
   top: 2vw;
   right: 2vw;
   z-index: 1;
+}
+
+.popup-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5vw;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(26, 34, 54, 0.95);
+  z-index: 10;
+  width: 100vw;
+}
+
+.popup {
+  background-color: #fff;
+  width: 85vw;
+  padding: 5%;
+}
+
+.popup h2 {
+  font-weight: 700;
+  font-size: 3.5vw;
+  color: #1a2236;
+}
+
+.popup-list {
+  display: flex;
+  gap: 1.3vw;
+  padding: 0;
+  margin-bottom: 1vw;
+}
+
+.popup-list li {
+  border: 1px solid #1a2236;
+  padding: 0.5vw;
 }
 
 @keyframes slidein {
