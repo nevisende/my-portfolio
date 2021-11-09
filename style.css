@@ -753,11 +753,36 @@ form textarea {
 
 .text-container {
   margin: auto;
-  width: 50%;
+  width: 53.85%;
 }
 
 .text-container * {
   margin: 3vw;
+}
+
+.popup-links *, .popup-buttons * {
+  margin: 0;
+}
+
+.project-button i {
+  margin-left: 3.5rem;
+}
+
+.project-button {
+  padding: 10px 15px;
+  background-color: #fff;
+  border: 1px solid #1a2236;
+  margin-right: 1rem;
+  margin: 4vh 1rem 4vh 0;
+}
+
+.fa-arrow-right {
+  margin: 0.4rem;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 @keyframes slidein {
