@@ -5,6 +5,7 @@ const menuIcon = document.getElementById('menu-icon');
 const itemsHeader = document.querySelectorAll('.header-item');
 const projectButtons = document.querySelectorAll('.project-button');
 const popupContainer = document.querySelector('.popup-container');
+const closePopup = document.getElementById('close-popup');
 
 function toogleMenu() {
   headerList.classList.toggle('header-list');
@@ -32,4 +33,8 @@ projectButtons.forEach((projectButton) => {
   projectButton.addEventListener('click', () => {
     popupContainer.style.display = 'flex';
   });
+});
+
+closePopup.addEventListener('click',  () => {
+  popupContainer.style.display = 'none';
 });
