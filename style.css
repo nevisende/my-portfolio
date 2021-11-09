@@ -670,6 +670,8 @@ form textarea {
   z-index: 1;
 }
 
+/* Start Popup */
+
 .popup-container {
   position: fixed;
   display: none;
@@ -702,6 +704,16 @@ form textarea {
 .popup h2 {
   font-weight: 700;
   font-size: 3.5vw;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup .fa-times {
+  font-size: 4vw;
 }
 
 .popup-list {
@@ -760,7 +772,8 @@ form textarea {
   margin: 3vw;
 }
 
-.popup-links *, .popup-buttons * {
+.popup-links *,
+.popup-buttons * {
   margin: 0;
 }
 
@@ -772,7 +785,6 @@ form textarea {
   padding: 10px 15px;
   background-color: #fff;
   border: 1px solid #1a2236;
-  margin-right: 1rem;
   margin: 4vh 1rem 4vh 0;
 }
 
@@ -784,6 +796,8 @@ form textarea {
   display: flex;
   justify-content: space-between;
 }
+
+/* End Popup */
 
 @keyframes slidein {
   from {
