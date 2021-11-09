@@ -684,7 +684,7 @@ form textarea {
   z-index: 10;
   width: 100vw;
   overflow: initial;
-  height: fit-content;
+  color: #1a2236;
 }
 
 .popup {
@@ -702,7 +702,6 @@ form textarea {
 .popup h2 {
   font-weight: 700;
   font-size: 3.5vw;
-  color: #1a2236;
 }
 
 .popup-list {
@@ -729,6 +728,36 @@ form textarea {
 .list-img {
   display: inline;
   width: 25%;
+}
+
+.big-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.big-image-container .fa-chevron-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 4vw;
+  color: #fff;
+}
+
+.big-image-container .fa-chevron-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 4vw;
+  color: #fff;
+}
+
+.text-container {
+  margin: auto;
+  width: 50%;
+}
+
+.text-container * {
+  margin: 3vw;
 }
 
 @keyframes slidein {
