@@ -22,6 +22,6 @@ menuIcon.addEventListener('click', () => {
 
 itemsHeader.forEach((item) => {
   item.addEventListener('click', () => {
-    toogleMenu();
+    if (window.outerWidth <= 980) toogleMenu();
   });
 });
