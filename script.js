@@ -10,6 +10,7 @@ const popupTitle = document.getElementById('popup-title');
 const popupImg = document.querySelector('.popup-img');
 const popupImgList = document.querySelector('.images');
 const popupP = document.getElementById('popup-p');
+const technologiesList = document.querySelector('.popup-list');
 const liveUrlButton = document.getElementById('live-url');
 const sourceUrlButton = document.getElementById('source-url');
 
@@ -17,7 +18,7 @@ const projects = [{
   name: 'Project name goes here',
   tecnologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
   desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi expedita quos velit magni? Porro eos libero, numquam neque nisi facere eum modi a quos autem, facilis nihil hic at aliquid eaque error molestiae sit voluptatum assumenda beatae nostrum. Quas, delectus',
-  images: ['.media/project-1.png'],
+  images: ['./media/project-1.png', './media/project-1.png', './media/project-1.png', './media/project-1.png'],
   liveUrl: 'htttp://hackon.me',
   sourceUrl: 'https://github.com/nevisende/my-portfolio',
 },
@@ -25,7 +26,7 @@ const projects = [{
   name: 'Project name goes here',
   tecnologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
   desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi expedita quos velit magni? Porro eos libero, numquam neque nisi facere eum modi a quos autem, facilis nihil hic at aliquid eaque error molestiae sit voluptatum assumenda beatae nostrum. Quas, delectus',
-  images: ['.media/project-2.png'],
+  images: ['./media/project-2.png', './media/project-2.png', './media/project-2.png', './media/project-2.png'],
   liveUrl: 'htttp://hackon.me',
   sourceUrl: 'https://github.com/nevisende/my-portfolio',
 },
@@ -33,7 +34,7 @@ const projects = [{
   name: 'Project name goes here',
   tecnologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
   desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi expedita quos velit magni? Porro eos libero, numquam neque nisi facere eum modi a quos autem, facilis nihil hic at aliquid eaque error molestiae sit voluptatum assumenda beatae nostrum. Quas, delectus',
-  images: ['.media/project-3.png'],
+  images: ['./media/project-3.png', './media/project-3.png', './media/project-3.png', './media/project-3.png'],
   liveUrl: 'htttp://hackon.me',
   sourceUrl: 'https://github.com/nevisende/my-portfolio',
 },
@@ -41,7 +42,7 @@ const projects = [{
   name: 'Project name goes here',
   tecnologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
   desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi expedita quos velit magni? Porro eos libero, numquam neque nisi facere eum modi a quos autem, facilis nihil hic at aliquid eaque error molestiae sit voluptatum assumenda beatae nostrum. Quas, delectus',
-  images: ['.media/project-4.png'],
+  images: ['./media/project-4.png', './media/project-4.png', './media/project-4.png', './media/project-4.png'],
   liveUrl: 'htttp://hackon.me',
   sourceUrl: 'https://github.com/nevisende/my-portfolio',
 },
@@ -49,7 +50,7 @@ const projects = [{
   name: 'Project name goes here',
   tecnologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
   desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi expedita quos velit magni? Porro eos libero, numquam neque nisi facere eum modi a quos autem, facilis nihil hic at aliquid eaque error molestiae sit voluptatum assumenda beatae nostrum. Quas, delectus',
-  images: ['.media/project-5.png'],
+  images: ['./media/project-5.png', './media/project-5.png', './media/project-5.png', './media/project-5.png'],
   liveUrl: 'htttp://hackon.me',
   sourceUrl: 'https://github.com/nevisende/my-portfolio',
 },
@@ -57,7 +58,7 @@ const projects = [{
   name: 'Project name goes here',
   tecnologies: ['HTML/CSS', 'Ruby on Rails', 'JavaScript'],
   desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi expedita quos velit magni? Porro eos libero, numquam neque nisi facere eum modi a quos autem, facilis nihil hic at aliquid eaque error molestiae sit voluptatum assumenda beatae nostrum. Quas, delectus',
-  images: ['.media/project-6.png'],
+  images: ['./media/project-6.png', './media/project-6.png', './media/project-6.png', './media/project-6.png'],
   liveUrl: 'htttp://hackon.me',
   sourceUrl: 'https://github.com/nevisende/my-portfolio',
 }];
@@ -87,9 +88,23 @@ itemsHeader.forEach((item) => {
 projectButtons.forEach((projectButton) => {
   projectButton.addEventListener('click', () => {
     const projectNumber = projectButton.value;
+    let i;
+    let k;
     popupTitle.innerText = projects[projectNumber - 1].name;
+    for (i = 0; i < projects[projectNumber - 1].tecnologies.length; i += 1) {
+      const tech = document.createElement('li');
+      tech.innerText = projects[projectNumber - 1].tecnologies[i];
+      technologiesList.appendChild(tech);
+    }
+    popupImg.src = projects[projectNumber - 1].images[0];
+    for (k = 0; k < projects[projectNumber - 1].images.length; k += 1) {
+      const image = document.createElement('img');
+      image.src = projects[projectNumber - 1].images[k];
+      image.classList.add('list-img');
+      popupImgList.appendChild(image);
+    }
+    popupP.innerText = projects[projectNumber - 1].desc;
     popupContainer.style.display = 'flex';
-    
   });
 });
 
