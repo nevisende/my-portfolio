@@ -1,3 +1,5 @@
+/*  eslint linebreak-style: ["error", "windows"]    */
+/* eslint-disable prefer-destructuring */
 /*  eslint-disable linebreak-style  */
 const hamburgerMenu = document.getElementById('hamburger-menu');
 const headerList = document.getElementById('header-list');
@@ -11,8 +13,6 @@ const popupImg = document.querySelector('.popup-img');
 const popupImgList = document.querySelector('.images');
 const popupP = document.getElementById('popup-p');
 const technologiesList = document.querySelector('.popup-list');
-const liveUrlButton = document.getElementById('live-url');
-const sourceUrlButton = document.getElementById('source-url');
 
 const projects = [{
   name: 'Project name goes here',
@@ -88,22 +88,23 @@ itemsHeader.forEach((item) => {
 projectButtons.forEach((projectButton) => {
   projectButton.addEventListener('click', () => {
     const projectNumber = projectButton.value;
+    let i;
+    let k;
     popupTitle.innerText = projects[projectNumber - 1].name;
-    for (var i = 0; i < projects[projectNumber - 1].tecnologies.length; i++) {
-      let tech = document.createElement('li');
+    for (i = 0; i < projects[projectNumber - 1].tecnologies.length; i += 1) {
+      const tech = document.createElement('li');
       tech.innerText = projects[projectNumber - 1].tecnologies[i];
       technologiesList.appendChild(tech);
     }
     popupImg.src = projects[projectNumber - 1].images[0];
-    for(var i = 0; i < projects[projectNumber - 1].images.length; i++) {
-      let image = document.createElement('img');
-      image.src = projects[projectNumber - 1].images[i];
+    for (k = 0; k < projects[projectNumber - 1].images.length; k += 1) {
+      const image = document.createElement('img');
+      image.src = projects[projectNumber - 1].images[k];
       image.classList.add('list-img');
       popupImgList.appendChild(image);
     }
     popupP.innerText = projects[projectNumber - 1].desc;
     popupContainer.style.display = 'flex';
-    
   });
 });
 
