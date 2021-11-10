@@ -812,3 +812,16 @@ form textarea {
     width: 100%;
   }
 }
+
+/* Form validation */
+
+.error-message {
+  /* display: none; */
+  margin-top: 0.5rem;
+  color: rgb(238, 16, 16);
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 3vw;
+  font-weight: 500;
+  text-decoration: underline;
+}
