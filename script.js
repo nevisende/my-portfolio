@@ -1,4 +1,4 @@
-/*  eslint linebreak-style: ["error", "windows"]    */
+/*  eslint linebreak-style: ["error", "unix"]    */
 /* eslint-disable prefer-destructuring */
 /*  eslint-disable linebreak-style  */
 const hamburgerMenu = document.getElementById('hamburger-menu');
