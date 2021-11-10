@@ -89,7 +89,7 @@ projectButtons.forEach((projectButton) => {
   projectButton.addEventListener('click', () => {
     const projectNumber = projectButton.value;
     popupTitle.innerText = projects[projectNumber - 1].name;
-    for(var i = 0; i < projects[projectNumber - 1].tecnologies.length; i++) {
+    for (var i = 0; i < projects[projectNumber - 1].tecnologies.length; i++) {
       let tech = document.createElement('li');
       tech.innerText = projects[projectNumber - 1].tecnologies[i];
       technologiesList.appendChild(tech);
@@ -109,4 +109,46 @@ projectButtons.forEach((projectButton) => {
 
 closePopup.addEventListener('click', () => {
   popupContainer.style.display = 'none';
+});
+
+// Form validation JS
+
+const contactForm = document.getElementById('contact-form');
+const email = document.getElementById('email');
+const errorMessage = document.querySelector('.error-message');
+
+function emailValidation() {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email.value));
+}
+
+function emailLowerCheck() {
+  const arr = email.value.split('');
+  let result = true;
+  arr.forEach((x) => {
+    // eslint-disable-next-line max-len
+    if (!((x.charCodeAt() >= 97 && x.charCodeAt() <= 122) || x.charCodeAt() === 64 || x.charCodeAt() === 46)) {
+      result = false;
+    }
+  });
+  return result;
+}
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (email.value.trim() === '') {
+    errorMessage.style.display = 'block';
+    errorMessage.innerText = 'Email is required!';
+    e.stopPropagation();
+  } else if (emailValidation() === false) {
+    errorMessage.style.display = 'block';
+    errorMessage.innerText = 'Please enter your email.';
+  } else if (emailLowerCheck() === false) {
+    errorMessage.style.display = 'block';
+    errorMessage.innerText = 'Please write your email in Lower case.';
+    errorMessage.scrollIntoView(true);
+  } else {
+    errorMessage.style.display = 'none';
+    contactForm.submit();
+  }
 });
