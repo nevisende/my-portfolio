@@ -678,7 +678,6 @@ form textarea {
   display: none;
   align-items: stretch;
   justify-content: center;
-  padding: 5vw;
   top: 0;
   left: 0;
   bottom: 0;
@@ -696,14 +695,14 @@ form textarea {
   align-items: stretch;
   background-color: #fff;
   width: 85vw;
-  padding: 5%;
-  margin: 1rem 0;
+  padding: 0 5% 0 5%;
+  margin: 4vw 0 0 0;
   overflow-y: auto;
 }
 
 .popup h2 {
   font-weight: 700;
-  font-size: 3.5vw;
+  font-size: 3vw;
 }
 
 .popup-header {
@@ -714,6 +713,7 @@ form textarea {
 
 .popup .fa-times {
   font-size: 4vw;
+  color: #1a2236;
 }
 
 .popup-list {
@@ -721,6 +721,7 @@ form textarea {
   gap: 1.3vw;
   padding: 0;
   margin-bottom: 1vw;
+  margin-top: -1vw;
 }
 
 .popup-list li {

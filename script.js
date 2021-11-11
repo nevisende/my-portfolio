@@ -88,6 +88,7 @@ itemsHeader.forEach((item) => {
 
 projectButtons.forEach((projectButton) => {
   projectButton.addEventListener('click', () => {
+    const bigImageNumber = 0;
     const projectNumber = projectButton.value;
     let i;
     let k;
@@ -100,7 +101,7 @@ projectButtons.forEach((projectButton) => {
       tech.innerText = projects[projectNumber - 1].tecnologies[i];
       technologiesList.appendChild(tech);
     }
-    popupImg.src = projects[projectNumber - 1].images[0];
+    popupImg.src = projects[projectNumber - 1].images[bigImageNumber];
 
     for (k = 0; k < projects[projectNumber - 1].images.length; k += 1) {
       const image = document.createElement('img');
@@ -118,49 +119,4 @@ projectButtons.forEach((projectButton) => {
 
 closePopup.addEventListener('click', () => {
   popupContainer.style.display = 'none';
-});
-
-// Form validation JS
-
-const contactForm = document.getElementById('contact-form');
-const email = document.getElementById('email');
-const errorMessage = document.querySelector('.error-message');
-
-function emailValidation() {
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email.value));
-}
-
-function emailLowerCheck() {
-  const arr = email.value.split('');
-  let result = true;
-  arr.forEach((x) => {
-    if (
-      !((x.charCodeAt() >= 97 && x.charCodeAt() <= 122)
-        || x.charCodeAt() === 64
-        || x.charCodeAt() === 46)
-    ) {
-      result = false;
-    }
-  });
-  return result;
-}
-
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  if (email.value.trim() === '') {
-    errorMessage.style.display = 'block';
-    errorMessage.innerText = 'Email is required!';
-    e.stopPropagation();
-  } else if (emailValidation() === false) {
-    errorMessage.style.display = 'block';
-    errorMessage.innerText = 'Please enter your email.';
-  } else if (emailLowerCheck() === false) {
-    errorMessage.style.display = 'block';
-    errorMessage.innerText = 'Please write your email in lower case.';
-    errorMessage.scrollIntoView(true);
-  } else {
-    errorMessage.style.display = 'none';
-    contactForm.submit();
-  }
 });
