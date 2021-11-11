@@ -1,5 +1,4 @@
-/*  eslint linebreak-style: ["error", "unix"]    */
-/* eslint-disable prefer-destructuring */
+/*  eslint linebreak-style: ["error", "unix"]   */
 /*  eslint-disable linebreak-style  */
 const hamburgerMenu = document.getElementById('hamburger-menu');
 const headerList = document.getElementById('header-list');
@@ -127,8 +126,11 @@ function emailLowerCheck() {
   const arr = email.value.split('');
   let result = true;
   arr.forEach((x) => {
-    // eslint-disable-next-line max-len
-    if (!((x.charCodeAt() >= 97 && x.charCodeAt() <= 122) || x.charCodeAt() === 64 || x.charCodeAt() === 46)) {
+    if (
+      !((x.charCodeAt() >= 97 && x.charCodeAt() <= 122)
+        || x.charCodeAt() === 64
+        || x.charCodeAt() === 46)
+    ) {
       result = false;
     }
   });
