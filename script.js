@@ -120,5 +120,3 @@ projectButtons.forEach((projectButton) => {
 closePopup.addEventListener('click', () => {
   popupContainer.style.display = 'none';
 });
-
-
