@@ -87,6 +87,7 @@ itemsHeader.forEach((item) => {
 
 projectButtons.forEach((projectButton) => {
   projectButton.addEventListener('click', () => {
+    const bigImageNumber = 0;
     const projectNumber = projectButton.value;
     let i;
     let k;
@@ -97,9 +98,9 @@ projectButtons.forEach((projectButton) => {
     for (i = 0; i < projects[projectNumber - 1].tecnologies.length; i += 1) {
       const tech = document.createElement('li');
       tech.innerText = projects[projectNumber - 1].tecnologies[i];
-    technologiesList.appendChild(tech);
+      technologiesList.appendChild(tech);
     }
-    popupImg.src = projects[projectNumber - 1].images[0];
+    popupImg.src = projects[projectNumber - 1].images[bigImageNumber];
 
     for (k = 0; k < projects[projectNumber - 1].images.length; k += 1) {
       const image = document.createElement('img');

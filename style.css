@@ -773,6 +773,8 @@ form textarea {
 
 .popup-buttons {
   margin-top: 6vw;
+  display: flex;
+  justify-content: space-between;
 }
 
 .popup-links *,
@@ -802,11 +804,6 @@ form textarea {
   background-color: #1a2236;
   border: #fff solid 0.05rem;
   color: #fff;
-}
-
-.popup-buttons {
-  display: flex;
-  justify-content: space-between;
 }
 
 /* End Popup */
