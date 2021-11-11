@@ -119,3 +119,23 @@ projectButtons.forEach((projectButton) => {
 closePopup.addEventListener('click', () => {
   popupContainer.style.display = 'none';
 });
+
+// Local Storage
+
+function setInputsToLocalStorage() {
+  const nameContact = document.getElementById('name');
+  const messageContact = document.getElementById('message');
+  const emailContact = document.getElementById('email');
+  const localStorageArr = {
+    name: nameContact.value,
+    email: emailContact.value,
+    message: messageContact.value,
+  };
+  localStorage.setItem('contactForm', JSON.stringify(localStorageArr));
+}
+
+function main() {
+  setInputsToLocalStorage();
+}
+
+window.onload = main();
