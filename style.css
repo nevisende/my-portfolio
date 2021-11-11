@@ -699,7 +699,6 @@ form textarea {
   padding: 5%;
   margin: 1rem 0;
   overflow-y: auto;
-  height: 80vh;
 }
 
 .popup h2 {
@@ -773,29 +772,39 @@ form textarea {
   margin: 3vw;
 }
 
+.popup-buttons {
+  margin-top: 6vw;
+  display: flex;
+  justify-content: space-between;
+}
+
 .popup-links *,
 .popup-buttons * {
   margin: 0;
 }
 
 .project-button i {
-  margin-left: 3.5rem;
+  margin-left: 3.5vw;
 }
 
 .project-button {
   padding: 10px 15px;
   background-color: #fff;
   border: 1px solid #1a2236;
-  margin: 4vh 1rem 4vh 0;
 }
 
 .fa-arrow-right {
   margin: 0.4rem;
 }
 
-.popup-buttons {
-  display: flex;
-  justify-content: space-between;
+#live-url {
+  margin-right: 1vw;
+}
+
+.popup-links .button:hover {
+  background-color: #1a2236;
+  border: #fff solid 0.05rem;
+  color: #fff;
 }
 
 /* End Popup */
@@ -819,7 +828,7 @@ form textarea {
 .error-message {
   /* display: none; */
   margin-top: 0.5rem;
-  color: rgb(238, 16, 16);
+  color: #e45865;
   text-align: center;
   padding: 0.5rem;
   font-size: 2.5vw;
