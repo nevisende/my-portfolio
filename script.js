@@ -134,8 +134,30 @@ function setInputsToLocalStorage() {
   localStorage.setItem('contactForm', JSON.stringify(localStorageArr));
 }
 
+const nameContact = document.getElementById('name');
+const messageContact = document.getElementById('message');
+const emailContact = document.getElementById('email');
+const inputArray = [nameContact, emailContact, messageContact];
+inputArray.forEach((input) => {
+  input.addEventListener('keyup', () => {
+    setInputsToLocalStorage();
+  });
+});
+
+function setInput() {
+  const nameContact = document.getElementById('name');
+  const messageContact = document.getElementById('message');
+  const emailContact = document.getElementById('email');
+  const localStorageArr = JSON.parse(localStorage.getItem('contactForm'));
+  if (localStorage.getItem('contactForm')) {
+    nameContact.value = localStorageArr.name;
+    messageContact.value = localStorageArr.message;
+    emailContact.value = localStorageArr.email;
+  }
+}
+
 function main() {
-  setInputsToLocalStorage();
+  setInput();
 }
 
 window.onload = main();
