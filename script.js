@@ -1,5 +1,4 @@
-/* eslint-disable prefer-destructuring */ /*  eslint linebreak-style: ["error", "unix"] */
-/*  eslint-disable linebreak-style  */
+/*  eslint linebreak-style: ["error", "unix"] */ /*  eslint-disable linebreak-style  */
 const hamburgerMenu = document.getElementById('hamburger-menu');
 const headerList = document.getElementById('header-list');
 const menuIcon = document.getElementById('menu-icon');
@@ -120,3 +119,44 @@ projectButtons.forEach((projectButton) => {
 closePopup.addEventListener('click', () => {
   popupContainer.style.display = 'none';
 });
+// Local Storage
+
+function setInputsToLocalStorage() {
+  const nameContact = document.getElementById('name');
+  const messageContact = document.getElementById('message');
+  const emailContact = document.getElementById('email');
+  const localStorageArr = {
+    name: nameContact.value,
+    email: emailContact.value,
+    message: messageContact.value,
+  };
+  localStorage.setItem('contactForm', JSON.stringify(localStorageArr));
+}
+
+const nameContact = document.getElementById('name');
+const messageContact = document.getElementById('message');
+const emailContact = document.getElementById('email');
+const inputArray = [nameContact, emailContact, messageContact];
+inputArray.forEach((input) => {
+  input.addEventListener('keyup', () => {
+    setInputsToLocalStorage();
+  });
+});
+
+function setInput() {
+  const nameContact = document.getElementById('name');
+  const messageContact = document.getElementById('message');
+  const emailContact = document.getElementById('email');
+  const localStorageArr = JSON.parse(localStorage.getItem('contactForm'));
+  if (localStorage.getItem('contactForm')) {
+    nameContact.value = localStorageArr.name;
+    messageContact.value = localStorageArr.message;
+    emailContact.value = localStorageArr.email;
+  }
+}
+
+function main() {
+  setInput();
+}
+
+window.onload = main();
