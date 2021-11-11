@@ -119,7 +119,6 @@ projectButtons.forEach((projectButton) => {
 closePopup.addEventListener('click', () => {
   popupContainer.style.display = 'none';
 });
-
 // Local Storage
 
 function setInputsToLocalStorage() {
