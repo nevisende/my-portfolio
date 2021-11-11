@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */ /*  eslint linebreak-style: ["error", "unix"] */
 /*  eslint-disable linebreak-style  */
 const hamburgerMenu = document.getElementById('hamburger-menu');
 const headerList = document.getElementById('header-list');
@@ -161,3 +162,4 @@ function main() {
 }
 
 window.onload = main();
+
